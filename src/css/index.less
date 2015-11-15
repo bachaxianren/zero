@@ -1,0 +1,644 @@
+@charset "gb2312";
+
+/* CSS Document */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+}
+ul, li, div, p, body, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+input {
+    -webkit-appearance: none;
+    outline: none
+}
+* {
+    outline: none;
+    webkit-focus-ring-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+.hide {
+    display: none;
+}
+body, html {
+    width: 100%;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+}
+
+/* *{-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;backface-visibility: hidden;} 用于解决某些情况下出现闪屏的问题，若无则不加*/
+body {
+    opacity: 1;
+    -webkit-transition: opacity 500ms ease-in;
+    transition: opacity 500ms ease-in;
+}
+p, a, li {
+    font-size: 1.2rem;
+    color: #434343
+}
+img{
+    max-width: 100%;
+    vertical-align: top;
+}
+/*common.less 此处仅给出框架样式示例，具体要根据页面类型自行调整框架样式*/
+html {
+    font-size: 312.5%;
+}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html {
+        font-size: 351.5%;
+    }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html {
+        font-size: 375%;
+    }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html {
+        font-size: 390.625%;
+    }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+    html {
+        font-size: 404.3%;
+    }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+    html {
+        font-size: 421.875%;
+    }
+}
+@media screen and (min-width:480px)and (max-width:639px) and (orientation:portrait) {
+    html {
+        font-size: 468.75%;
+    }
+}
+@media screen and (min-width:640px) and (orientation:portrait) {
+    html {
+        font-size: 625%;
+    }
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow-x: hidden;
+}
+#forhorview{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    z-index: 102;
+    color: #FFF;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 3rem;
+    display: none;
+}
+.g-wrap {
+    width: 100%;
+    height: 100%;
+    &.noscroll {
+        overflow: hidden;
+    }
+    .g-page {
+        z-index: 0;
+        opacity: 0;
+        width: 7.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        &.active {
+            z-index: 1;
+            opacity: 1;
+            height: 12.04rem;
+        }
+        .header{
+            height: 1.78rem;
+            img{
+                width: 7.5rem;
+            }
+        }
+        .content{
+            height: 8.1rem;
+            background: url(../img/bg2.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .footer{
+            height: 2.25rem;
+            position: relative;
+            top: -0.09rem;
+            img{
+                width: 7.5rem;
+            }
+        }
+    }
+    .content{
+        position: relative;
+    }
+    .blackboard{
+        color: #fff;
+        width: 6.44rem;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        .title{
+            padding-top: 1.65rem;
+        }
+        .laotou{
+            width: 1.49rem;
+            margin-top: .7rem;
+            opacity: 0;
+        }
+        .baogao{
+            position: absolute;
+            top: 4.64rem;
+            left: 2.2rem;
+        }
+        .start{
+            color: #fff;
+            font-size: .5rem;
+            position: absolute;
+            bottom: .5rem;
+            right: .5rem;
+            opacity: 0;
+        }
+    }
+    .curtain{
+        position: absolute;
+        top: 0;
+        width: 7.5rem;
+        height: 8.1rem;
+        overflow: hidden;
+        img{
+            height: 8.1rem;
+            position: absolute;
+            &:first-child{
+                width: 3.66rem;
+                left: 0;
+                top: 0;
+            }
+            &:last-child{
+                width: 3.84rem;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
+.txt1,.txt2{
+    position: relative;
+}
+.txt1{
+    height: .63rem;
+}
+.txt2{
+    height: .41rem;
+    margin-top: 0.1rem;
+}
+.txt1 .modal{
+    width:100%;
+    height: .63rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+}
+.txt2 .modal{
+    width: 100%;
+    height: .43rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+}
+.bg_1,.bg_2{
+    position: relative;
+}
+.bg_1{
+    height: .36rem;
+}
+.bg_2{
+    height: .4rem;
+    margin-top: 0.1rem;
+}
+.bg_1 .modal,.bg_2 .modal{
+    width: 100%;
+    height: .6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+}
+.show {
+    .txt1 .modal{
+        -webkit-animation:run 2s steps(10) 0s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .txt2 .modal{
+        -webkit-animation:run 2s steps(10) 2s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .bg_1 .modal{
+        -webkit-animation:run 2s steps(13) 5s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .bg_2 .modal{
+        -webkit-animation:run 2s steps(9) 7s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .laotou{
+         -webkit-animation-name: fadeIn;
+         -webkit-animation-duration: 1s;
+         -webkit-animation-delay: 4s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .start{
+         -webkit-animation-name: fadeIn;
+         -webkit-animation-duration: 1s;
+         -webkit-animation-delay: 9s;
+        -webkit-animation-fill-mode: forwards;
+    }
+}
+
+.question{
+    height: 8.1rem;
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: 100%;
+    display: none;
+    position: relative;
+    .word{
+        text-align: center;
+        padding-top: 2.07rem;
+        height: 6.03rem;
+    }
+    .wrong{
+        display: none;
+        height: 8.1rem;
+        background: url(../img/bg1.jpg) no-repeat;
+        background-size: 100%;
+        padding-left: .9rem;
+        &.show{
+            display: block;
+            .xiaoming{
+                -webkit-animation-name: fadeIn;
+                 -webkit-animation-duration: 1.5s;
+                -webkit-animation-fill-mode: forwards;
+            }
+            .techer{
+                -webkit-animation-duration: 100ms;
+                 -webkit-animation-delay: .5s;
+                -webkit-animation-iteration-count: 20;
+                -webkit-animation-name: shake-horizontal;
+                -webkit-animation-timing-function: ease-in-out;
+            }
+        }
+    }
+    .solution{
+        width: 7.5rem;
+        display: none;
+        position: relative;
+        &.show{
+            display: block;
+        }
+        .continu{
+            position: absolute;
+            bottom: 1rem;
+            right: .5rem;
+            font-size: .5rem;
+            color: #000;
+        }
+    }
+    &.active{
+        display: block;
+        .whip{
+            -webkit-animation-duration: 1s;
+            -webkit-animation-name: verical-slow;
+            -webkit-animation-timing-function: ease-in-out; 
+        }
+    }
+    .whip{
+        width: 2.23rem;
+        height: 3.65rem;
+        position: absolute;
+        background: url(../img/whip.png) no-repeat;
+        background-size: 100%;
+        bottom: .8rem;
+        right: -.3rem;
+    }
+    .next{
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+        color: #fff;
+        font-size: .5rem;
+        z-index: 9999;
+    }
+    .next2{
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+        color: #fff;
+        font-size: .5rem;
+        z-index: 9999;
+    }
+    .xiaoming{
+        padding-top: 1.13rem;
+        opacity: 0;
+    }
+    .xiaoming img:first-child{
+        width: 1.37rem;
+    }
+    .techer{
+        font-size: 0;
+        position: absolute;
+        bottom: 1rem;
+        display: none;
+    }
+    .techer img{
+        &:first-child{
+            width: 1.53rem;
+            position: relative;
+        }
+        &:last-child{
+            width: 4.83rem;
+            margin-left: -.2rem;
+        }
+    }
+    .xiaoming img{
+        &:last-child{
+            width: 3.98rem;
+        }
+    }
+}
+.question-5{
+    .xiaoming img{
+        &:last-child{
+            width: 4.75rem;
+        }
+    }
+    .solution.show{
+        .pao{
+            -webkit-animation-duration: 100ms;
+            -webkit-animation-iteration-count: 10;
+            -webkit-animation-name: shake-horizontal;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+    }
+}
+.role{
+    display: none;
+    position: absolute;
+    width: 6.96rem;
+    top: 50%;
+    left: 50%;
+    margin-left: -3.48rem;
+    margin-top: -3.37rem;
+    -webkit-transform: scale(0);
+    z-index: 2;
+    &.show{
+        display: block;
+        -webkit-animation-name: scaled;
+        -webkit-animation-duration: 1.5s;
+        -webkit-transition-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+    }
+    
+}
+.gluss{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.show{
+        -webkit-animation-name: fadeIn;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    
+}
+.page-2{
+    a{
+        display: block;
+        width: 4.76rem;
+        height: .7rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.38rem;
+    }
+    .download{
+        top: 9.09rem;
+    }
+    .share{
+        top: 9.95rem;
+    }
+}
+.juhua{
+    width: 4.03rem;
+}
+.huanggua{
+    width: 4.19rem;
+}
+.lvcha{
+    width: 3.98rem;
+}
+.erbi{
+    width: 3.86rem;
+}
+.dapao{
+    width: 3.98rem;
+}
+
+.pao{
+  position: absolute;
+  width: 4.07rem;
+  left: 50%;
+  margin-left: -2.035rem;
+  top: 1.86rem;  
+}
+
+@-webkit-keyframes scaled{
+    0%{
+        -webkit-transform: scale(0.1) translate3d(16rem,-34rem,0);
+    }
+    100%{
+        -webkit-transform: scale(1) translate3d(0,0,0);
+    }
+}
+@-webkit-keyframes run{
+    100%{-webkit-transform: translateX(100%);}
+}
+@-webkit-keyframes run2{
+    100%{-webkit-transform: translateX(100%);}
+}
+.slideLeft{
+    -webkit-animation: slideLeft 3s linear;
+    -webkit-animation-fill-mode: forwards;
+}
+.slideRight{
+    -webkit-animation: slideRight 3s linear;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes slideLeft {
+  0% { -webkit-transform: translateX(0)} 
+  100% { -webkit-transform: translateX(-100%)} 
+}
+@-webkit-keyframes slideRight {
+  0% { -webkit-transform: translateX(0)} 
+  100% { -webkit-transform: translateX(100%)} 
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes verical-slow {
+  2% ,48%,96%{
+    -webkit-transform: translate(.3rem, .3rem) rotate(5eg); }
+  24%,72%{
+    -webkit-transform: translate(-.3rem, -.3rem) rotate(-5deg); }
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0); } }
+
+@-webkit-keyframes shake-horizontal {
+  2% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  4% {
+    -webkit-transform: translate(4px, 0) rotate(0); }
+  6% {
+    -webkit-transform: translate(7px, 0) rotate(0); }
+  8% {
+    -webkit-transform: translate(-1px, 0) rotate(0); }
+  10% {
+    -webkit-transform: translate(-1px, 0) rotate(0); }
+  12% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  14% {
+    -webkit-transform: translate(-3px, 0) rotate(0); }
+  16% {
+    -webkit-transform: translate(-8px, 0) rotate(0); }
+  18% {
+    -webkit-transform: translate(-9px, 0) rotate(0); }
+  20% {
+    -webkit-transform: translate(-3px, 0) rotate(0); }
+  22% {
+    -webkit-transform: translate(-9px, 0) rotate(0); }
+  24% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  26% {
+    -webkit-transform: translate(10px, 0) rotate(0); }
+  28% {
+    -webkit-transform: translate(9px, 0) rotate(0); }
+  30% {
+    -webkit-transform: translate(-2px, 0) rotate(0); }
+  32% {
+    -webkit-transform: translate(9px, 0) rotate(0); }
+  34% {
+    -webkit-transform: translate(2px, 0) rotate(0); }
+  36% {
+    -webkit-transform: translate(-5px, 0) rotate(0); }
+  38% {
+    -webkit-transform: translate(3px, 0) rotate(0); }
+  40% {
+    -webkit-transform: translate(0px, 0) rotate(0); }
+  42% {
+    -webkit-transform: translate(4px, 0) rotate(0); }
+  44% {
+    -webkit-transform: translate(-7px, 0) rotate(0); }
+  46% {
+    -webkit-transform: translate(-4px, 0) rotate(0); }
+  48% {
+    -webkit-transform: translate(9px, 0) rotate(0); }
+  50% {
+    -webkit-transform: translate(-6px, 0) rotate(0); }
+  52% {
+    -webkit-transform: translate(-3px, 0) rotate(0); }
+  54% {
+    -webkit-transform: translate(3px, 0) rotate(0); }
+  56% {
+    -webkit-transform: translate(6px, 0) rotate(0); }
+  58% {
+    -webkit-transform: translate(-5px, 0) rotate(0); }
+  60% {
+    -webkit-transform: translate(-6px, 0) rotate(0); }
+  62% {
+    -webkit-transform: translate(8px, 0) rotate(0); }
+  64% {
+    -webkit-transform: translate(8px, 0) rotate(0); }
+  66% {
+    -webkit-transform: translate(-7px, 0) rotate(0); }
+  68% {
+    -webkit-transform: translate(8px, 0) rotate(0); }
+  70% {
+    -webkit-transform: translate(6px, 0) rotate(0); }
+  72% {
+    -webkit-transform: translate(5px, 0) rotate(0); }
+  74% {
+    -webkit-transform: translate(6px, 0) rotate(0); }
+  76% {
+    -webkit-transform: translate(7px, 0) rotate(0); }
+  78% {
+    -webkit-transform: translate(-2px, 0) rotate(0); }
+  80% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  82% {
+    -webkit-transform: translate(0px, 0) rotate(0); }
+  84% {
+    -webkit-transform: translate(-6px, 0) rotate(0); }
+  86% {
+    -webkit-transform: translate(0px, 0) rotate(0); }
+  88% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  90% {
+    -webkit-transform: translate(-1px, 0) rotate(0); }
+  92% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  94% {
+    -webkit-transform: translate(4px, 0) rotate(0); }
+  96% {
+    -webkit-transform: translate(1px, 0) rotate(0); }
+  98% {
+    -webkit-transform: translate(3px, 0) rotate(0); }
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0); } }
+
+.start,.next,.next2,.continu{
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    border:1px solid #2b92d4; 
+    box-shadow:0 1px 2px rgba(0,0,0,.3); 
+    overflow:hidden;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6cc3fe), to(#21a1d0));
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 2700ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes breathe {
+    0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
